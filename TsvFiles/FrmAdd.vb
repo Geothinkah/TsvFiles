@@ -16,7 +16,8 @@ Public Class FrmAdd
     Public Sub SubAddRecord()
         ReadSettings()
         TsvCounter += 1
-        Dim unused = WriteToFile(FullPath, CStr(TsvCounter), TxtName.Text, DtpDateDue.Value.ToString, TxtAmount.Text)
+        'Dim unused = WriteToFile(FullPath, CStr(TsvCounter), TxtName.Text, DtpDateDue.Value.ToString, TxtAmount.Text)
+        Dim unused = WriteToFile(FullPath, CStr(TsvCounter), TxtName.Text, DtpDateDue.Value.ToShortDateString, TxtAmount.Text)
         SaveSettings()
     End Sub
 
@@ -39,5 +40,9 @@ Public Class FrmAdd
     Private Sub FrmAdd_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         FrmTsvFiles.Enabled = True
         ' Close()
+    End Sub
+
+    Private Sub DtpDateDue_ValueChanged(sender As Object, e As EventArgs) Handles DtpDateDue.ValueChanged
+
     End Sub
 End Class

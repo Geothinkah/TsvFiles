@@ -73,10 +73,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="FrmAdd.Designer.vb">
       <DependentUpon>FrmAdd.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDelete.Designer.vb">
+      <DependentUpon>FrmDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDelete.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSelect.Designer.vb">
@@ -113,6 +120,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FrmAdd.resx">
       <DependentUpon>FrmAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDelete.resx">
+      <DependentUpon>FrmDelete.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSelect.resx">
       <DependentUpon>FrmSelect.vb</DependentUpon>

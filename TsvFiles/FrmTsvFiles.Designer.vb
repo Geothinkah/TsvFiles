@@ -22,14 +22,17 @@ Partial Class FrmTsvFiles
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MnuTSVFiles = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddRecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SelectRecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteRecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditRecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SortRecordsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TimerMain = New System.Windows.Forms.Timer(Me.components)
+        Me.LblTimer = New System.Windows.Forms.Label()
         Me.MnuTSVFiles.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -39,7 +42,7 @@ Partial Class FrmTsvFiles
         Me.MnuTSVFiles.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
         Me.MnuTSVFiles.Location = New System.Drawing.Point(0, 0)
         Me.MnuTSVFiles.Name = "MnuTSVFiles"
-        Me.MnuTSVFiles.Size = New System.Drawing.Size(1200, 29)
+        Me.MnuTSVFiles.Size = New System.Drawing.Size(1877, 29)
         Me.MnuTSVFiles.TabIndex = 8
         Me.MnuTSVFiles.Text = "MenuStrip1"
         '
@@ -68,30 +71,48 @@ Partial Class FrmTsvFiles
         Me.DeleteRecordToolStripMenuItem.Size = New System.Drawing.Size(177, 26)
         Me.DeleteRecordToolStripMenuItem.Text = "Delete Record"
         '
+        'EditRecordToolStripMenuItem
+        '
+        Me.EditRecordToolStripMenuItem.Enabled = False
+        Me.EditRecordToolStripMenuItem.Name = "EditRecordToolStripMenuItem"
+        Me.EditRecordToolStripMenuItem.Size = New System.Drawing.Size(177, 26)
+        Me.EditRecordToolStripMenuItem.Text = "Edit Record"
+        '
+        'SortRecordsToolStripMenuItem
+        '
+        Me.SortRecordsToolStripMenuItem.Enabled = False
+        Me.SortRecordsToolStripMenuItem.Name = "SortRecordsToolStripMenuItem"
+        Me.SortRecordsToolStripMenuItem.Size = New System.Drawing.Size(177, 26)
+        Me.SortRecordsToolStripMenuItem.Text = "Sort Records"
+        '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(177, 26)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
-        'EditRecordToolStripMenuItem
+        'TimerMain
         '
-        Me.EditRecordToolStripMenuItem.Name = "EditRecordToolStripMenuItem"
-        Me.EditRecordToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
-        Me.EditRecordToolStripMenuItem.Text = "Edit Record"
+        Me.TimerMain.Enabled = True
         '
-        'SortRecordsToolStripMenuItem
+        'LblTimer
         '
-        Me.SortRecordsToolStripMenuItem.Name = "SortRecordsToolStripMenuItem"
-        Me.SortRecordsToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
-        Me.SortRecordsToolStripMenuItem.Text = "Sort Records"
+        Me.LblTimer.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LblTimer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.LblTimer.Location = New System.Drawing.Point(12, 41)
+        Me.LblTimer.Name = "LblTimer"
+        Me.LblTimer.Size = New System.Drawing.Size(126, 80)
+        Me.LblTimer.TabIndex = 9
+        Me.LblTimer.Text = "Label1"
+        Me.LblTimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FrmTsvFiles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Cyan
-        Me.ClientSize = New System.Drawing.Size(1200, 692)
+        Me.ClientSize = New System.Drawing.Size(1877, 692)
+        Me.Controls.Add(Me.LblTimer)
         Me.Controls.Add(Me.MnuTSVFiles)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MainMenuStrip = Me.MnuTSVFiles
@@ -114,4 +135,6 @@ Partial Class FrmTsvFiles
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EditRecordToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SortRecordsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TimerMain As Timer
+    Friend WithEvents LblTimer As Label
 End Class

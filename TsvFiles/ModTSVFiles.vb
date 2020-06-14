@@ -8,6 +8,7 @@ Module ModTSVFiles
     Public TsvRecord As String
     Public delimiter As String = ControlChars.Tab
     Public TsvCounter As Integer = 0
+    Public AccountArray(100) As String
 
 #Region "***** Write to file *****"
     ''' <summary>
@@ -54,7 +55,6 @@ Module ModTSVFiles
     Public Sub SaveSettings()
         Dim tsv As String = CStr(TsvCounter)
         File.WriteAllText(DataPath & "\Settings.tsv", tsv)
-
     End Sub
 
 #End Region

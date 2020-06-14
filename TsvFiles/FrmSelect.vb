@@ -1,5 +1,5 @@
 ﻿Public Class FrmSelect
-    Public AccountArray(100) As String
+
     Private Sub FrmSelect_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FillListBox()
     End Sub
@@ -10,7 +10,6 @@
     End Sub
 
     Private Sub LstAccounts_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstAccounts.SelectedIndexChanged
-        'LblSelected.Text = LstAccounts.SelectedItem.ToString
         Panel1.Visible = True
         Dim currentRecord() As String = Split(AccountArray(LstAccounts.SelectedIndex), delimiter)
         LblID.Text = currentRecord(0)
@@ -18,9 +17,6 @@
         LblDueDate.Text = currentRecord(2)
         LblAmountDue.Text = currentRecord(3)
     End Sub
-
-
-
 
     Public Sub FillListBox()
         Dim currentline As String

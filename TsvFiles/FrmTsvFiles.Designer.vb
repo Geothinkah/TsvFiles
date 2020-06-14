@@ -28,8 +28,6 @@ Partial Class FrmTsvFiles
         Me.AddRecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SelectRecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteRecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditRecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SortRecordsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerMain = New System.Windows.Forms.Timer(Me.components)
         Me.LblTimer = New System.Windows.Forms.Label()
@@ -48,7 +46,7 @@ Partial Class FrmTsvFiles
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddRecordToolStripMenuItem, Me.SelectRecordToolStripMenuItem, Me.DeleteRecordToolStripMenuItem, Me.EditRecordToolStripMenuItem, Me.SortRecordsToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddRecordToolStripMenuItem, Me.SelectRecordToolStripMenuItem, Me.DeleteRecordToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(46, 25)
         Me.FileToolStripMenuItem.Text = "File"
@@ -70,20 +68,6 @@ Partial Class FrmTsvFiles
         Me.DeleteRecordToolStripMenuItem.Name = "DeleteRecordToolStripMenuItem"
         Me.DeleteRecordToolStripMenuItem.Size = New System.Drawing.Size(177, 26)
         Me.DeleteRecordToolStripMenuItem.Text = "Delete Record"
-        '
-        'EditRecordToolStripMenuItem
-        '
-        Me.EditRecordToolStripMenuItem.Enabled = False
-        Me.EditRecordToolStripMenuItem.Name = "EditRecordToolStripMenuItem"
-        Me.EditRecordToolStripMenuItem.Size = New System.Drawing.Size(177, 26)
-        Me.EditRecordToolStripMenuItem.Text = "Edit Record"
-        '
-        'SortRecordsToolStripMenuItem
-        '
-        Me.SortRecordsToolStripMenuItem.Enabled = False
-        Me.SortRecordsToolStripMenuItem.Name = "SortRecordsToolStripMenuItem"
-        Me.SortRecordsToolStripMenuItem.Size = New System.Drawing.Size(177, 26)
-        Me.SortRecordsToolStripMenuItem.Text = "Sort Records"
         '
         'ExitToolStripMenuItem
         '
@@ -133,8 +117,6 @@ Partial Class FrmTsvFiles
     Friend WithEvents DeleteRecordToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SelectRecordToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EditRecordToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SortRecordsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TimerMain As Timer
     Friend WithEvents LblTimer As Label
 End Class

@@ -25,9 +25,11 @@ Partial Class FrmTsvFiles
         Me.MnuTSVFiles = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddRecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeleteRecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SelectRecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteRecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditRecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SortRecordsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MnuTSVFiles.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -43,7 +45,7 @@ Partial Class FrmTsvFiles
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddRecordToolStripMenuItem, Me.SelectRecordToolStripMenuItem, Me.DeleteRecordToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddRecordToolStripMenuItem, Me.SelectRecordToolStripMenuItem, Me.DeleteRecordToolStripMenuItem, Me.EditRecordToolStripMenuItem, Me.SortRecordsToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(46, 25)
         Me.FileToolStripMenuItem.Text = "File"
@@ -54,23 +56,35 @@ Partial Class FrmTsvFiles
         Me.AddRecordToolStripMenuItem.Size = New System.Drawing.Size(177, 26)
         Me.AddRecordToolStripMenuItem.Text = "Add Record"
         '
-        'DeleteRecordToolStripMenuItem
-        '
-        Me.DeleteRecordToolStripMenuItem.Name = "DeleteRecordToolStripMenuItem"
-        Me.DeleteRecordToolStripMenuItem.Size = New System.Drawing.Size(177, 26)
-        Me.DeleteRecordToolStripMenuItem.Text = "Delete Record"
-        '
         'SelectRecordToolStripMenuItem
         '
         Me.SelectRecordToolStripMenuItem.Name = "SelectRecordToolStripMenuItem"
         Me.SelectRecordToolStripMenuItem.Size = New System.Drawing.Size(177, 26)
         Me.SelectRecordToolStripMenuItem.Text = "Select Record"
         '
+        'DeleteRecordToolStripMenuItem
+        '
+        Me.DeleteRecordToolStripMenuItem.Name = "DeleteRecordToolStripMenuItem"
+        Me.DeleteRecordToolStripMenuItem.Size = New System.Drawing.Size(177, 26)
+        Me.DeleteRecordToolStripMenuItem.Text = "Delete Record"
+        '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(177, 26)
         Me.ExitToolStripMenuItem.Text = "Exit"
+        '
+        'EditRecordToolStripMenuItem
+        '
+        Me.EditRecordToolStripMenuItem.Name = "EditRecordToolStripMenuItem"
+        Me.EditRecordToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.EditRecordToolStripMenuItem.Text = "Edit Record"
+        '
+        'SortRecordsToolStripMenuItem
+        '
+        Me.SortRecordsToolStripMenuItem.Name = "SortRecordsToolStripMenuItem"
+        Me.SortRecordsToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.SortRecordsToolStripMenuItem.Text = "Sort Records"
         '
         'FrmTsvFiles
         '
@@ -98,4 +112,6 @@ Partial Class FrmTsvFiles
     Friend WithEvents DeleteRecordToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SelectRecordToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EditRecordToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SortRecordsToolStripMenuItem As ToolStripMenuItem
 End Class
